@@ -11,6 +11,19 @@ import Layout from './layout.js'
 //
 const root = createRoot(document.querySelector("#app"))
 
+fetch("https://www.swapi.tech/api/people/")
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.error(err))
+fetch("https://www.swapi.tech/api/planets/")
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.error(err))
+fetch("https://www.swapi.tech/api/vehicles/")
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.error(err))
+
 //render your react application
 root.render(<Layout/>)
 
